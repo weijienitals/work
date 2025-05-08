@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: Ralali_API
+
+  webflux:
+    base-path: /
+    # Additional WebFlux settings if needed
+
+logging:
+  level:
+    com.example.ralali_api: DEBUG
+    com.example.ralali_api.service.RalaliApiService: DEBUG
+    org.springframework.web.reactive.function.client: DEBUG
+
+ralali:
+  api:
+    base-url: https://apigw.ralali.com
+    sellers-endpoint: /search/v3/sellers
+    items-endpoint: /search/v3/items
+    auth-token: eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOjEwMDAwLCJ0b2tlbl92ZXJzaW9uIjoiMS4wLjAiLCJ0b2tlbl90eXBlIjoiZ3Vlc3RfdG9rZW4iLCJhdWQiOiIxMSIsImV4cCI6MTc0Njc1Mjc5MywianRpIjoiNWE4ZGM0ZDktMTRhMi04Mzk4LWExZjMtMTEwMjc1MGFhNWY2IiwiaWF0IjoxNzQ2NjY2MzkzLCJpc3MiOiIvZXgvdjMvdG9rZW4ifQ.qWyugtPD-LD_AHEoAypP8LfU7dncA7vGwG_AfVFQB56mEYW32U4jInZAQ3WB1sn8R0Pnnnvtks03DGQB4_KPUCv7xLA5hHJXGxh0ieqEWKmguObrTM5HfiYFXPatjzmPt41xRx0PqAW25o0V2pjgBXjyCfgx2pzqmO6nddk1FfjaOHAMnShkPJ9P59SeiLwODwg-o21TwT5y9s6E2EJ_HVI3rPMvk4E0fX1OQf2hkpe05ntAGnnpJurYUaED2rSwNEGCUFCNUzd2NYelrxEphXbzUv-35U85DnGTXSb8NSac3bjGvol7Pji4CliaalM6h5eX8AckHcDGQMmI_orTcA
+    guest-id: defd5756-0b0c-4271-a6c6-9f5dfb4d1d86
+    query-params:
+      is-personal-courier: false
+      is-wholesale: false
+      limit: 20
+      max-price: 10000000000
+      min-price: 1
+      order-by: match
+      page: 1
